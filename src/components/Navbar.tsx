@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   // Handle scroll effect for transparent navbar
   useEffect(() => {
@@ -86,7 +88,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden z-10 text-foreground hover:text-studio-orange transition-colors" 
+            className="md:hidden z-20 text-foreground hover:text-studio-orange transition-colors" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -101,30 +103,30 @@ const Navbar = () => {
 
       {/* Mobile Navigation Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-white pt-20 px-6 z-0 animate-fade-in overflow-y-auto">
+        <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm pt-20 px-6 z-10 animate-fade-in overflow-y-auto shadow-lg">
           <nav className="flex flex-col space-y-6 py-6">
-            <NavLink to="/" className="text-xl font-medium py-2">
+            <NavLink to="/" className="text-xl font-medium py-2 border-b border-gray-100">
               Home
             </NavLink>
-            <NavLink to="/about" className="text-xl font-medium py-2">
+            <NavLink to="/about" className="text-xl font-medium py-2 border-b border-gray-100">
               About
             </NavLink>
-            <NavLink to="/parties" className="text-xl font-medium py-2">
+            <NavLink to="/parties" className="text-xl font-medium py-2 border-b border-gray-100">
               Parties
             </NavLink>
-            <NavLink to="/classes" className="text-xl font-medium py-2">
+            <NavLink to="/classes" className="text-xl font-medium py-2 border-b border-gray-100">
               Classes
             </NavLink>
-            <NavLink to="/gallery" className="text-xl font-medium py-2">
+            <NavLink to="/gallery" className="text-xl font-medium py-2 border-b border-gray-100">
               Gallery
             </NavLink>
-            <NavLink to="/info" className="text-xl font-medium py-2">
+            <NavLink to="/info" className="text-xl font-medium py-2 border-b border-gray-100">
               Info
             </NavLink>
-            <NavLink to="/community" className="text-xl font-medium py-2">
+            <NavLink to="/community" className="text-xl font-medium py-2 border-b border-gray-100">
               Community
             </NavLink>
-            <NavLink to="/gifts" className="text-xl font-medium py-2">
+            <NavLink to="/gifts" className="text-xl font-medium py-2 border-b border-gray-100">
               Gift Cards
             </NavLink>
           </nav>
