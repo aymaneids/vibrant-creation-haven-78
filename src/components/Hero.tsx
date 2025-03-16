@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/30 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1605048578067-b67aa49fa810?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&q=80"
           alt="Colorful pottery" 
           className="w-full h-full object-cover"
         />
