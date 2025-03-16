@@ -1,4 +1,3 @@
-
 import Hero from '@/components/Hero';
 import FeaturedActivities from '@/components/FeaturedActivities';
 import Testimonials from '@/components/Testimonials';
@@ -6,10 +5,8 @@ import StudioMap from '@/components/StudioMap';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 const Index = () => {
-  return (
-    <div>
+  return <div>
       {/* Hero Section */}
       <Hero />
       
@@ -22,18 +19,10 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1621976360612-1394f30475a5?q=80&w=1974&auto=format&fit=crop" 
-                  alt="Fire Escape Art Studio Interior" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Fire Escape Art Studio Interior" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-lg overflow-hidden shadow-xl hidden lg:block">
-                <img 
-                  src="https://images.unsplash.com/photo-1605048937812-a1f5e8145efc?q=80&w=1974&auto=format&fit=crop" 
-                  alt="Pottery detail" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1605048937812-a1f5e8145efc?q=80&w=1974&auto=format&fit=crop" alt="Pottery detail" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-studio-yellow rounded-lg shadow-xl hidden lg:block"></div>
             </div>
@@ -90,8 +79,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
